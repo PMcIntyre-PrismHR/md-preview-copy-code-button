@@ -35,5 +35,8 @@ Thumbs.db
 .env
 .env.*
 
+# Miscellaneous
+vsc-extension-quickstart.md
+
 # Extension Output
 *.vsix
