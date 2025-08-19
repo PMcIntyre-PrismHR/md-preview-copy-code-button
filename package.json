@@ -1,0 +1,71 @@
+{
+  "name": "md-preview-copy-code-button",
+  "displayName": "MD Preview Copy Code Button",
+  "description": "Adds a \"Copy Code\" button to each code block and inline code block in the markdown preview window.",
+  "author": {
+    "name": "Phillip McIntyre Jr",
+    "email": "phillip.mcintyre@prismhr.com",
+    "url": "https://github.com/PMcIntyre-PrismHR"
+  },
+  "publisher": "PrismHR",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "keywords": [
+    "vscode",
+    "markdown",
+    "markdown-preview",
+    "copy-code",
+    "copy-button"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "license": "MIT",
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": [
+      "./media/styles.css"
+    ],
+    "markdown.previewScripts": [
+      "./scripts/copyButtonScript.js"
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "export": "npm run package && npx vsce package --out md-preview-copy-code-button.vsix"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.19.9",
+    "@types/vscode": "^1.102.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.25.3",
+    "eslint": "^9.25.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}

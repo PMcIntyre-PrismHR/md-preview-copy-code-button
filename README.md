@@ -1,4 +1,4 @@
-# md-preview-copy-code-button
+# Markdown Preview - Copy Code Button
 
 This extension adds copy functionality to the VSCode Markdown Preview for code blocks and inline code blocks.
 
