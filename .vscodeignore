@@ -1,0 +1,29 @@
+# VS Code Folder
+.vscode/**
+
+# VS Code Test Runtime
+.vscode-test/**
+**/.vscode-test.*
+
+# Build Outputs
+out/**
+node_modules/**
+
+# Code
+src/**
+
+# Git
+.gitignore
+
+# Configurations
+.yarnrc
+**/tsconfig.json
+**/eslint.config.mjs
+esbuild.js
+
+# Maps and Source Files
+**/*.map
+**/*.ts
+
+# Miscellaneous
+vsc-extension-quickstart.md

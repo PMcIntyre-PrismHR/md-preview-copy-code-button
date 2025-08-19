@@ -1,0 +1,39 @@
+# VS Code Folder
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!*.code-workspace
+
+# VS Code Test Runtime
+.vscode-test/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build Outputs
+dist/
+out/
+
+# Maps generated in build outputs
+# (kept out of Git; packaging is controlled by .vscodeignore)
+*.map
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# ESLint cache
+.eslintcache
+
+# Env Files
+.env
+.env.*
+
+# Extension Output
+*.vsix
